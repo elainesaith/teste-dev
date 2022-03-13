@@ -21,7 +21,7 @@ object FrmProduto: TFrmProduto
     Top = 0
     Width = 905
     Height = 507
-    ActivePage = TabPesquisa
+    ActivePage = TabCadastro
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -30,12 +30,8 @@ object FrmProduto: TFrmProduto
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 801
-    ExplicitHeight = 469
     object TabCadastro: TTabSheet
       Caption = 'TabCadastro'
-      ExplicitLeft = 8
-      ExplicitTop = 32
       object Label1: TLabel
         Left = 154
         Top = 104
@@ -58,15 +54,15 @@ object FrmProduto: TFrmProduto
         Caption = 'Data de Fabrica'#231#227'o:'
       end
       object Label5: TLabel
-        Left = 341
-        Top = 166
+        Left = 91
+        Top = 197
         Width = 113
         Height = 17
         Caption = 'Data de Validade:'
       end
       object Label6: TLabel
         Left = 125
-        Top = 198
+        Top = 230
         Width = 79
         Height = 17
         Caption = 'Fornecedor:'
@@ -106,8 +102,6 @@ object FrmProduto: TFrmProduto
         Height = 50
         Align = alBottom
         TabOrder = 6
-        ExplicitTop = 387
-        ExplicitWidth = 793
         object DBNavigator1: TDBNavigator
           Left = 1
           Top = 1
@@ -117,7 +111,6 @@ object FrmProduto: TFrmProduto
           VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
           Align = alClient
           TabOrder = 0
-          ExplicitWidth = 700
         end
         object Button1: TButton
           Left = 768
@@ -131,8 +124,8 @@ object FrmProduto: TFrmProduto
         end
       end
       object edtvalidade_produto: TDBEdit
-        Left = 461
-        Top = 163
+        Left = 210
+        Top = 194
         Width = 121
         Height = 25
         DataField = 'validade_produto'
@@ -141,7 +134,7 @@ object FrmProduto: TFrmProduto
       end
       object lkpcodigo_fornecedor: TDBLookupComboBox
         Left = 210
-        Top = 194
+        Top = 226
         Width = 372
         Height = 25
         DataField = 'codigo_fornecedor'
@@ -153,7 +146,7 @@ object FrmProduto: TFrmProduto
       end
       object ckbsituacao_produto: TDBCheckBox
         Left = 210
-        Top = 233
+        Top = 265
         Width = 121
         Height = 17
         Caption = 'Produto Ativo'
@@ -168,8 +161,6 @@ object FrmProduto: TFrmProduto
       Caption = 'TabPesquisa'
       ImageIndex = 1
       OnShow = TabPesquisaShow
-      ExplicitWidth = 793
-      ExplicitHeight = 437
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
@@ -177,13 +168,19 @@ object FrmProduto: TFrmProduto
         Height = 475
         Align = alClient
         DataSource = DtmProduto.dtsPesquisa
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+        ParentFont = False
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -15
+        TitleFont.Height = -13
         TitleFont.Name = 'Arial'
-        TitleFont.Style = []
+        TitleFont.Style = [fsBold]
         OnDblClick = DBGrid1DblClick
         Columns = <
           item

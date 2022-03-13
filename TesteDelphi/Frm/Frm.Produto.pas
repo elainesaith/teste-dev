@@ -75,8 +75,6 @@ end;
 procedure TFrmProduto.TabPesquisaShow(Sender: TObject);
 begin
   DtmProduto.AtualizarPesquisaProduto;
-//  DtmProduto.memPesquisa.Close;
-//  DtmProduto.memPesquisa.Open;
 end;
 
 end.
