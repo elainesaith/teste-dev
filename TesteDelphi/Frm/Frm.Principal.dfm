@@ -12,19 +12,69 @@ object FrmPrincipal: TFrmPrincipal
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnClose = FormClose
   OnCreate = FormCreate
-  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 30
+    Width = 275
+    Height = 18
+    Margins.Top = 30
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Cadastros'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 73
+  end
+  object Label2: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 218
+    Width = 275
+    Height = 18
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Consultas'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 69
+  end
+  object Bevel1: TBevel
+    AlignWithMargins = True
+    Left = 3
+    Top = 200
+    Width = 275
+    Height = 5
+    Margins.Top = 15
+    Margins.Bottom = 10
+    Align = alTop
+    Shape = bsTopLine
+    ExplicitLeft = -3
+    ExplicitTop = 196
+    ExplicitWidth = 281
+  end
   object btnFornecedor: TButton
     AlignWithMargins = True
     Left = 40
-    Top = 100
+    Top = 61
     Width = 201
     Height = 57
     Margins.Left = 40
-    Margins.Top = 100
+    Margins.Top = 10
     Margins.Right = 40
+    Margins.Bottom = 0
     Align = alTop
     Caption = 'Fornecedor'
     Font.Charset = DEFAULT_CHARSET
@@ -39,12 +89,13 @@ object FrmPrincipal: TFrmPrincipal
   object btnProduto: TButton
     AlignWithMargins = True
     Left = 40
-    Top = 180
+    Top = 128
     Width = 201
     Height = 57
     Margins.Left = 40
-    Margins.Top = 20
+    Margins.Top = 10
     Margins.Right = 40
+    Margins.Bottom = 0
     Align = alTop
     Caption = 'Produto'
     Font.Charset = DEFAULT_CHARSET
@@ -55,5 +106,26 @@ object FrmPrincipal: TFrmPrincipal
     ParentFont = False
     TabOrder = 1
     OnClick = btnProdutoClick
+  end
+  object btnConsultaProdutos: TButton
+    AlignWithMargins = True
+    Left = 40
+    Top = 249
+    Width = 201
+    Height = 57
+    Margins.Left = 40
+    Margins.Top = 10
+    Margins.Right = 40
+    Margins.Bottom = 0
+    Align = alTop
+    Caption = 'Produtos'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+    OnClick = btnConsultaProdutosClick
   end
 end

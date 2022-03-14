@@ -8,7 +8,9 @@ uses
   Dtm.Fornecedor in 'Dtm\Dtm.Fornecedor.pas' {DtmFornecedor: TDataModule},
   Frm.Principal in 'Frm\Frm.Principal.pas' {FrmPrincipal},
   Dtm.Principal in 'Dtm\Dtm.Principal.pas' {DtmPrincipal: TDataModule},
-  REST in 'Unt\REST.pas';
+  REST in 'Unt\REST.pas',
+  Frm.ConsultaProduto in 'Frm\Frm.ConsultaProduto.pas' {FrmConsultaProduto},
+  Dtm.ConsultaProduto in 'Dtm\Dtm.ConsultaProduto.pas' {DtmConsultaProduto: TDataModule};
 
 {$R *.res}
 

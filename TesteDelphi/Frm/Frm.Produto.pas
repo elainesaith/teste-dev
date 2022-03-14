@@ -54,7 +54,7 @@ end;
 
 procedure TFrmProduto.DBGrid1DblClick(Sender: TObject);
 begin
-  DtmProduto.ProdutoOpen(DtmProduto.memPesquisa.FieldByName('codigo_produto').AsInteger);
+  DtmProduto.ProdutoOpen(DtmProduto.qryPesquisa.FieldByName('codigo_produto').AsInteger);
   pcProduto.ActivePage := TabCadastro;
 end;
 
@@ -74,7 +74,8 @@ end;
 
 procedure TFrmProduto.TabPesquisaShow(Sender: TObject);
 begin
-  DtmProduto.AtualizarPesquisaProduto;
+  DtmProduto.qryPesquisa.Close;
+  DtmProduto.qryPesquisa.Open;
 end;
 
 end.

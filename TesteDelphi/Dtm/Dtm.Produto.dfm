@@ -27,7 +27,7 @@ object DtmProduto: TDtmProduto
     Top = 120
   end
   object dtsPesquisa: TDataSource
-    DataSet = memPesquisa
+    DataSet = qryPesquisa
     Left = 128
     Top = 120
   end
@@ -44,14 +44,14 @@ object DtmProduto: TDtmProduto
     Left = 232
     Top = 96
   end
-  object memPesquisa: TFDMemTable
-    FetchOptions.AssignedValues = [evMode]
-    FetchOptions.Mode = fmAll
-    ResourceOptions.AssignedValues = [rvSilentMode]
-    ResourceOptions.SilentMode = True
-    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
-    UpdateOptions.CheckRequired = False
-    UpdateOptions.AutoCommitUpdates = True
+  object qryPesquisa: TFDQuery
+    Connection = DtmPrincipal.conn
+    SQL.Strings = (
+      'select p.*, descricao_fornecedor, cidade_fornecedor '
+      'from produtos p'
+      
+        'left join fornecedores f on f.codigo_fornecedor = p.codigo_forne' +
+        'cedor')
     Left = 128
     Top = 48
   end

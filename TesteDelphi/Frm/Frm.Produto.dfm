@@ -21,7 +21,7 @@ object FrmProduto: TFrmProduto
     Top = 0
     Width = 905
     Height = 507
-    ActivePage = TabCadastro
+    ActivePage = TabPesquisa
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

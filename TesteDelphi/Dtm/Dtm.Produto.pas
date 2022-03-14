@@ -15,7 +15,7 @@ type
     dtsPesquisa: TDataSource;
     qryFornecedor: TFDQuery;
     dtsFornecedor: TDataSource;
-    memPesquisa: TFDMemTable;
+    qryPesquisa: TFDQuery;
     procedure qryProdutoNewRecord(DataSet: TDataSet);
     procedure qryProdutoUpdateRecord(ASender: TDataSet;
       ARequest: TFDUpdateRequest; var AAction: TFDErrorAction;
@@ -24,11 +24,9 @@ type
     procedure qryProdutoBeforePost(DataSet: TDataSet);
   private
     { Private declarations }
-    function BuscarListaProdutosAPI: string;
   public
     { Public declarations }
     procedure ProdutoOpen(ACodigo: integer);
-    procedure AtualizarPesquisaProduto;
   end;
 
 var
@@ -43,21 +41,6 @@ uses Dtm.Principal, Vcl.Forms, Winapi.Windows, REST;
 {$R *.dfm}
 
 { TDtmProduto }
-
-procedure TDtmProduto.AtualizarPesquisaProduto;
-begin
-  JsonToDataSet(memPesquisa, BuscarListaProdutosAPI);
-end;
-
-function TDtmProduto.BuscarListaProdutosAPI: string;
-begin
-  result := '';
-  //
-  DtmPrincipal.RESTClient.BaseURL := 'https://localhost:7097/produtos';
-  DtmPrincipal.RESTRequest.Execute;
-  if DtmPrincipal.RESTResponse.StatusCode = 200 then
-    result := DtmPrincipal.RESTResponse.Content;
-end;
 
 procedure TDtmProduto.ProdutoOpen(ACodigo: integer);
 begin

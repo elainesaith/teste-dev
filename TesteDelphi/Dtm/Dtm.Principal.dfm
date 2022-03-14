@@ -9,6 +9,7 @@ object DtmPrincipal: TDtmPrincipal
       'Database=teste_autoglass'
       'ConnectionDef=MSSQL_Demo')
     Connected = True
+    LoginPrompt = False
     Left = 72
     Top = 56
   end

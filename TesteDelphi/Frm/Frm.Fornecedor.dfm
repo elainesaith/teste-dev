@@ -21,7 +21,7 @@ object FrmFornecedor: TFrmFornecedor
     Top = 0
     Width = 614
     Height = 281
-    ActivePage = TabCadastro
+    ActivePage = TabPesquisa
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -30,14 +30,8 @@ object FrmFornecedor: TFrmFornecedor
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 612
-    ExplicitHeight = 275
     object TabCadastro: TTabSheet
       Caption = 'TabCadastro'
-      ExplicitLeft = 8
-      ExplicitTop = 32
-      ExplicitWidth = 604
-      ExplicitHeight = 353
       object Label1: TLabel
         Left = 53
         Top = 48
@@ -94,8 +88,6 @@ object FrmFornecedor: TFrmFornecedor
         Height = 50
         Align = alBottom
         TabOrder = 3
-        ExplicitTop = 193
-        ExplicitWidth = 604
         object DBNavigator1: TDBNavigator
           Left = 1
           Top = 1
@@ -105,9 +97,6 @@ object FrmFornecedor: TFrmFornecedor
           VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
           Align = alClient
           TabOrder = 0
-          ExplicitTop = 15
-          ExplicitWidth = 120
-          ExplicitHeight = 602
         end
         object Button1: TButton
           Left = 514
@@ -118,7 +107,6 @@ object FrmFornecedor: TFrmFornecedor
           Caption = 'Pesquisa'
           TabOrder = 1
           OnClick = Button1Click
-          ExplicitLeft = 512
         end
       end
     end
@@ -126,9 +114,6 @@ object FrmFornecedor: TFrmFornecedor
       Caption = 'TabPesquisa'
       ImageIndex = 1
       OnShow = TabPesquisaShow
-      ExplicitTop = 24
-      ExplicitWidth = 604
-      ExplicitHeight = 357
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
